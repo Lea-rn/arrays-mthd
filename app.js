@@ -91,16 +91,63 @@
 // }
 
 
+// const movements = [200,450,-400,1000,-800,100] ; 
+
+// for (const mov of movements) {
+//     if (mov > 0) {
+//         console.log(`you deposit : ${mov}`)
+//     } 
+//     else {
+//         console.log(`you withdraw : ${Math.abs(mov)}`)  
+//     }
+// }
+
+
+
+////// forEach (higher order function) ///////////////
+
 const movements = [200,450,-400,1000,-800,100] ; 
 
-for (const mov of movements) {
-    if (mov > 0) {
-        console.log(`you deposit : ${mov}`)
-    } 
-    else {
-        console.log(`you withdraw : ${Math.abs(mov)}`)  
-    }
-}
+///// syntaxe :: array.forEach(function (){
+// } )   ; 
+
+// movements.forEach(function(ele , i ){
+// if (ele > 0){
+//     console.log(`movement ${i+1} : you deposit ${ele}`)
+// } else {
+//     console.log(`movement ${i+1} : you withdraw ${Math.abs(ele)}`)
+// }
+// })
+
+
+///////////// break with forEach and for /////////////////////////////////////
+// const names = ["jhon" , "peter" , "mark"] ;
+
+// for (const x of names) {
+//     if (x === "peter") break  ; 
+
+//     console.log(x)
+// }
+
+// names.forEach((name , index)=> {
+//     if (name === "peter") break ; 
+//      console.log(name)
+// })
+
+
+///////// sort ::: 
+
+// let numbers = [10,2,5,100,6,9,30] ; 
+// console.log(numbers)  
+
+// const result = numbers.sort((a,b)=> a - b )
+// console.log(result)
+
+
+// const names = ["dddd" , "cccc" , "aaaa" , "aAaa"] ;
+
+// const result = names.sort((a,b)=> a.localeCompare(b))
+// console.log(result)
 
 
 
@@ -110,7 +157,26 @@ for (const mov of movements) {
 
 
 
+///////////////////////////////////////////////////
 
+// ////// function expression  ::
+
+// const x = function (){
+//     console.log("hello")
+// }
+
+// ///// function declaration :: 
+
+// function y (){
+
+// }
+
+// ////// arrow function :: 
+
+// const z = ()=> {}
+
+
+// x()  ////// invocation ; call the function ; run the function 
 
 
 ////// challange :: 
@@ -124,7 +190,10 @@ for (const mov of movements) {
 // Given an array of numbers, add a new number to the end of the array .
 ////////////////////
 /// answer ::
- 
+//  const arr = [1,2,3,4,5]
+//  arr.push(6)
+//  console.log(arr)
+
 
 
 
@@ -137,6 +206,8 @@ for (const mov of movements) {
 
 
 ////// put your answer here ...........
+// arr.pop()
+//  console.log(arr)
 
 
 //////////////
@@ -147,6 +218,10 @@ for (const mov of movements) {
 // const arr = [1,2,3,4,5]
 
 ////// put your answer here ...........
+// const arr = [1,2,3,4,5]
+
+// arr.unshift(0)
+// console.log(arr)
 
 
 // Remove the First Element:
@@ -154,6 +229,9 @@ for (const mov of movements) {
 /////////////////
 // 
 ////// put your answer here ...........
+
+// arr.shift()
+// console.log(arr)
 
 
 
@@ -168,7 +246,16 @@ for (const mov of movements) {
 
 ////// put your answer here ...........
 
+// const arr = [1,2,3,4,5]
 
+// function check (ele , array){
+// let message = array.includes(ele) ?  "element exist" : "element does not exist"
+// console.log(message)
+// }
+
+
+
+// check(20 , [5,30,20,80])
 
 
 
@@ -183,10 +270,14 @@ for (const mov of movements) {
 // const arr = [1,2,3,4,5]
 // const arr2 = [6,7,8,9,10]
 
-////// put your answer here ...........
+// ////// put your answer here ...........
 
+// const arr3 = arr.concat(arr2)
 
+// console.log(arr)
+// console.log(arr2)
 
+// console.log(arr3)
 
 
 
@@ -198,6 +289,9 @@ for (const mov of movements) {
 
 ////// put your answer here ...........
 
+// const arr2 = [6,7,8,9,10]
+// console.log(arr2)
+// console.log(arr2.reverse())
 
 
 
@@ -218,6 +312,11 @@ for (const mov of movements) {
 ////// put your answer here ..........
 ////////////////////
 
+// const arr2 = [6,7,8,9,10,20,30,50,60]
+
+// console.log(arr2)
+// console.log(arr2.slice(2,6))
+
 
 
 
@@ -230,7 +329,11 @@ for (const mov of movements) {
 ////// put your answer here ...........
 ///////////////////////////
 
+// const arr2 = [6,7,8,9,10,20,30,50,60]
+// console.log(arr2)
 
+// arr2.splice(2,3)
+// console.log(arr2)
 
 
 
@@ -246,6 +349,16 @@ for (const mov of movements) {
 // const arrOfNumbers= [1,2,3,4,5,6] ; 
 
 // const sumNumOfArray = function (arr){
+
+// const arrOfNumbers= [1,2,3,4,5,6]
+
+// const sumNumOfArray = function (arr){
+//   let sum = 0 ; /// 1  // 3  // 6
+//     arr.forEach((ele)=> sum = sum + ele)   ///// 0 = 0 + 1 ; 1 = 1 + 2 ; 3 = 3 + 3
+//     return sum 
+// }
+
+// console.log(sumNumOfArray(arrOfNumbers))
   
 
 
@@ -260,8 +373,13 @@ for (const mov of movements) {
 // Remove Element by Index:
 // Given an array, remove the element at a specific index using splice.
 ////// put your answer here ...........
+// const arrOfNumbers= [1,2,3,4,5,6]
+// console.log(arrOfNumbers)
+// let indexToRemove = 3 ; 
 
+// arrOfNumbers.splice(indexToRemove , 1 )
 
+// console.log(arrOfNumbers)
 
 
 
@@ -275,6 +393,13 @@ for (const mov of movements) {
 ////// put your answer here ...........
 /////////////////////
 
+// const names = ["jhon" , "peter" , "mark"] 
+
+// names.splice(1,2 , 10 , 50)
+// console.log(names)
+
+
+
 
 
 
@@ -287,6 +412,8 @@ for (const mov of movements) {
 // Use slice to get the last 3 elements from an array.
 ////// put your answer here ...........
 
+//  const arrOfNumbers= [1,2,3,4,5,6]
+//  console.log(arrOfNumbers.slice(-3))
 
 ////////////////////
 
@@ -303,6 +430,12 @@ for (const mov of movements) {
 ////////////////////
 // const arr1 = [5,3,2,1,4] 
 // const arr2 = [9,8,6,10,7]
+// console.log(arr1)
+// console.log(arr2)
+// const arr3 = arr1.concat(arr2)
+// arr3.sort((a,b)=> a- b)
+
+// console.log(arr3)
 
 
 
@@ -321,6 +454,22 @@ for (const mov of movements) {
 ////// put your answer here ...........
 
 ////////////////
+const arr2 = [0,8,6,10,7 ,11 ,13]
+
+///// first method :: 
+
+function max (arr){
+let maxNumber = arr[0] ;    //// 13
+  arr.forEach((num)=> {
+    if (num > maxNumber) {
+        maxNumber = num
+    }
+  })
+  return maxNumber
+}
+
+console.log(arr2)
+console.log(max(arr2))
 
 
 
